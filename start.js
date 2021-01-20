@@ -3,6 +3,7 @@ const http = require('http');
 const fs = require('fs');
 
 const PORT = process.env.PORT || 8080;
+const IP = "3.210.76.137";
 
 // const options = {
 //     key: fs.readFileSync('key.pem'),
@@ -28,7 +29,7 @@ http.createServer(function (req, res) {
         res.writeHead(200, { "Content-Type": mimeType });
         res.end(data);
     });
-}).listen(PORT, function () {
+}).listen(PORT, IP, function () {
     console.clear();
     console.log(`Modiface SDK nodeJs server running on port - ${PORT}`);
 });
