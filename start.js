@@ -28,7 +28,7 @@ http.createServer(function (req, res) {
         res.writeHead(200, { "Content-Type": mimeType });
         res.end(data);
     });
-}).listen(PORT, '0.0.0.0', function () {
+}).listen(PORT, function () {
     console.clear();
     console.log(`Modiface SDK nodeJs server running on port - ${PORT}`);
 });
